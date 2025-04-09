@@ -1,0 +1,24 @@
+{
+    "ara_crop_pipeline": {
+        "function_name": "ara_crop_pipeline",
+        "description": "Pipeline to compute phenotypes for Arabidopsis plant images, merge with metadata, and save the results.\nArgs:\n    metadata_path (str): Path to the metadata JSON file.\n    output_dir (str): Directory to save the results.\n    pixel_to_cm (float): Pixel to cm mapping scale. Default is 0.03.\nReturns:\n    Dict[str, Any]: Status and path to the saved results.",
+        "args": {
+            "metadata_path": {
+                "type": "Annotated",
+                "description": "",
+                "default": null
+            },
+            "output_dir": {
+                "type": "Annotated",
+                "description": "",
+                "default": null
+            },
+            "pixel_to_cm": {
+                "type": "Annotated",
+                "description": "",
+                "default": 0.03
+            }
+        },
+        "output": "Dict[str, Any]"
+    }
+}

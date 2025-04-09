@@ -1,0 +1,1 @@
+{"instance-segmentation": ["fengchen025/arabidopsis_leaf-instance-segmentation_cvppp2017-a1a4_m2fb_fullft", "potato_leaf-instance-segmentation_leaf-only-sam"], "image-classification": ["fengchen025/winter-wheat_nutri-defi-identify_dndww20_dino2b_lora"], "image-regression": []}
