@@ -27,24 +27,19 @@ This is the official code repository for our paper [*"PhenoAssistant: A Conversa
 
 ## Environment setup and demo
 
-To play with a demo, make sure you have a GPU (RAM > ?) and Azure (or OpenAI) API key available, then follow these steps:
+To play with a demo, make sure you have a **GPU (RAM > ?)** and **Azure (or OpenAI) API key** available, then follow these steps:
 
 1. Clone the repository:  
    `git clone https://github.com/fengchen025/PhenoAssistant.git`
-
 2. Navigate into the project directory:  
    `cd PhenoAssistant`
-
 3. Create the conda environment (this may take ~15 minutes):  
    `conda env create -f environment.yml`
-
 4. Activate the environment:  
    `conda activate phenoassistant`
-
 5. Install requirements for Leaf-only-sam:
+   `mkdir -p ./models`
    `pip install git+https://github.com/facebookresearch/segment-anything.git`
-   
-   `wget -O models/sam_vit_h_4b8939.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth`
-
-6. Set up .env.yaml
-7. Play with the demo
+   `wget -O ./models/sam_vit_h_4b8939.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth`
+6. Set up [.env.yaml](https://github.com/fengchen025/PhenoAssistant/blob/main/.env.yaml) with your API key
+7. Play with the demo at ++
