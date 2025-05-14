@@ -27,7 +27,7 @@ This is the official code repository for our paper [*"PhenoAssistant: A Conversa
 
 ## Environment setup and demo
 
-To play with a demo, make sure you have a **GPU (RAM > ?)** and **Azure (or OpenAI) API key** available, then follow these steps:
+To play with a demo, make sure you have **GPU** (to infer deep learning models) and **Azure (or OpenAI) API key** available, then follow these steps:
 
 1. Clone the repository:  
    `git clone https://github.com/fengchen025/PhenoAssistant.git`
