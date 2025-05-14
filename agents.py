@@ -65,7 +65,7 @@ if os.environ['API_TYPE'] == "azure":
 elif os.environ['API_TYPE'] == "openai":
     config_list = [
     {
-        "model": 'gpt-4o',
+        "model": os.environ['MODEL_NAME'],
         "temperature": 0.1,
         "cache_seed": 42,
         "timeout": 540000,
@@ -260,7 +260,7 @@ if os.environ['API_TYPE'] == "azure":
 elif os.environ['API_TYPE'] == "openai":
     pdsllm = OpenAI(
         api_token=os.environ['OPENAI_API_KEY'],
-        model_name='gpt-4o',
+        model_name=os.environ['MODEL_NAME'],
     )
 else:
     raise ValueError("API_TYPE must be either 'azure' or 'openai'.")
