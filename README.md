@@ -8,7 +8,7 @@ This is the official code repository for our paper [*"PhenoAssistant: A Conversa
 
 - **Case studies' chat logs**  
   Chat logs for the case studies presented in our manuscript are available in:  
-  - `case1.ipynb`  
+  - `[case1.ipynb](https://github.com/fengchen025/PhenoAssistant/blob/main/case1.ipynb)`  
   - `case2.ipynb`  
   - `case3.ipynb`
 
