@@ -10,9 +10,9 @@ import json
 # sam1 libs
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
 # sam2 libs
-from sam2.build_sam import build_sam2
-from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
-from sam2.sam2_image_predictor import SAM2ImagePredictor
+# from sam2.build_sam import build_sam2
+# from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
+# from sam2.sam2_image_predictor import SAM2ImagePredictor
 
 from torchvision.ops import masks_to_boxes
 from pycocotools import mask as maskUtils
@@ -195,7 +195,7 @@ def infer_leaf_only_sam(
         file_path: Annotated[Optional[str], "Path to CSV/JSON file with a 'file_name' column/key containing image URLs"] = None,
         device: Annotated[str, "Device to use for inference ('cuda' or 'cpu')."] = "cuda",
         output_dir: Annotated[str, "Directory path to save results."] = "./results",
-        sam_version: Annotated[str, "SAM version."] = "sam2", # sam or sam2
+        sam_version: Annotated[str, "SAM version."] = "sam", # sam or sam2
         ) -> str:
     """
     Perform leaf instance segmentation on a list of images using Leaf_Only_SAM.
@@ -240,19 +240,19 @@ def infer_leaf_only_sam(
             crop_n_points_downscale_factor=2,
             min_mask_region_area=200,  
         )
-    elif sam_version == "sam2":
-        sam_checkpoint = "./models//sam2.1_hiera_large.pt"
-        model_cfg = ".models/sam2.1_hiera_l.yaml"
-        sam = build_sam2(model_cfg, sam_checkpoint, device=device, apply_postprocessing=False)
-        mask_generator = SAM2AutomaticMaskGenerator(
-            model=sam,
-            points_per_side=32,
-            pred_iou_thresh=0.88,
-            stability_score_thresh=0.95,
-            crop_n_layers=1,
-            crop_n_points_downscale_factor=2,
-            min_mask_region_area=200,  
-        )
+    # elif sam_version == "sam2":
+    #     sam_checkpoint = "./models//sam2.1_hiera_large.pt"
+    #     model_cfg = ".models/sam2.1_hiera_l.yaml"
+    #     sam = build_sam2(model_cfg, sam_checkpoint, device=device, apply_postprocessing=False)
+    #     mask_generator = SAM2AutomaticMaskGenerator(
+    #         model=sam,
+    #         points_per_side=32,
+    #         pred_iou_thresh=0.88,
+    #         stability_score_thresh=0.95,
+    #         crop_n_layers=1,
+    #         crop_n_points_downscale_factor=2,
+    #         min_mask_region_area=200,  
+    #     )
     else:
         raise ValueError(f"Invalid sam_version: {sam_version}")
     
