@@ -43,4 +43,5 @@ To play with a demo, make sure you have a GPU (RAM > ?) and Azure (or OpenAI) AP
 
 5. Install requirements for Leaf-only-sam:
    `pip install git+https://github.com/facebookresearch/segment-anything.git`
+   
    `wget -O models/sam_vit_h_4b8939.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth`
