@@ -388,8 +388,8 @@ def infer_instance_segmentation(
     """
     if checkpoint == 'potato_leaf-instance-segmentation_leaf-only-sam':
         return infer_leaf_only_sam(image_urls, file_path, device, output_dir, sam_version='sam')
-    elif checkpoint == 'potato_leaf-instance-segmentation_leaf-only-sam2':
-        return infer_leaf_only_sam(image_urls, file_path, device, output_dir, sam_version='sam2')
+    # elif checkpoint == 'potato_leaf-instance-segmentation_leaf-only-sam2':
+    #     return infer_leaf_only_sam(image_urls, file_path, device, output_dir, sam_version='sam2')
 
     if (image_urls and file_path) or (not image_urls and not file_path):
         return "Error: Provide either 'image_urls' or 'file_path', but not both."
