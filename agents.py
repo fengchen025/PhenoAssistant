@@ -260,7 +260,7 @@ if os.environ['API_TYPE'] == "azure":
 elif os.environ['API_TYPE'] == "openai":
     pdsllm = OpenAI(
         api_token=os.environ['OPENAI_API_KEY'],
-        model_name=os.environ['MODEL_NAME'],
+        model=os.environ['MODEL_NAME'],
     )
 else:
     raise ValueError("API_TYPE must be either 'azure' or 'openai'.")
