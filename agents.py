@@ -284,7 +284,9 @@ def compute_csv(
         ) -> str:
     df = pd.read_csv(file_path)
     # GPT setting
-    agent_config = {"llm": pdsllm,}
+    agent_config = {"llm": pdsllm,
+                    "custom_whitelisted_dependencies": ["scikit-learn", "scipy"],
+                    }
     agent = Agent(df, config=agent_config,)
     # # Bamboo seeting
     # agent = Agent(df)
