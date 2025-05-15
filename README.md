@@ -48,5 +48,4 @@ To play with a demo, make sure you have **GPU** (to infer deep learning models) 
 
 ---
 
-Note: All case studies, evaluations, and demo results were generated using GPT-4o (version: 2024-08-06) via Azure OpenAI. Using a different model or provider may lead to slightly different results.
-Note that all case studies, evaluation, and demo were runn using gpt-4o (2024-08-06 version) from Azure OpenAI, other models and deployments may generate slighltly different results.
+Note: All case studies, evaluations, and demo results were generated using GPT-4o (version: 2024-08-06) via Azure OpenAI. Using a different model or provider may lead to different results.
