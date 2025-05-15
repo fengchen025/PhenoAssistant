@@ -25,9 +25,11 @@ This is the official code repository for our paper [*"PhenoAssistant: A Conversa
 - Implementation of agents is available at [agents.py](https://github.com/fengchen025/PhenoAssistant/blob/main/agents.py)
 - Implementation of tools is available at [functions](https://github.com/fengchen025/PhenoAssistant/tree/main/functions)
 
+---
+
 ## Environment setup and demo
 
-To play with a demo, make sure you have **GPU** (to infer deep learning models) and **Azure (or OpenAI) API key** available, then follow these steps:
+To play with a demo, make sure you have **GPU** (to infer deep learning models) and **Azure OpenAI (or OpenAI) API key** available, then follow these steps:
 
 1. Clone the repository:  
    `git clone https://github.com/fengchen025/PhenoAssistant.git`
@@ -41,5 +43,10 @@ To play with a demo, make sure you have **GPU** (to infer deep learning models) 
    - `mkdir -p ./models`
    - `pip install git+https://github.com/facebookresearch/segment-anything.git`
    - `wget -O ./models/sam_vit_h_4b8939.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth`
-6. Set up [.env.yaml](https://github.com/fengchen025/PhenoAssistant/blob/main/.env.yaml) with your API key
-7. Play with the demo at ++
+6. Set up [.env.yaml](https://github.com/fengchen025/PhenoAssistant/blob/main/.env.yaml) with your API key. See comments inside the file for guidance.
+7. Run the demo at [demo.ipynb](https://github.com/fengchen025/PhenoAssistant/blob/main/demo.ipynb). Depending on your machine, it may take ~15 minutes to complete. Example outputs are shown in the notebook and saved at [./results/demo](https://github.com/fengchen025/PhenoAssistant/tree/main/results/demo).
+
+---
+
+Note: All case studies, evaluations, and demo results were generated using GPT-4o (version: 2024-08-06) via Azure OpenAI. Using a different model or provider may lead to slightly different results.
+Note that all case studies, evaluation, and demo were runn using gpt-4o (2024-08-06 version) from Azure OpenAI, other models and deployments may generate slighltly different results.
